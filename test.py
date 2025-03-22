@@ -9,6 +9,7 @@ username = "standard_user"
 password = "secret_sauce"
 first_name = "Richard"
 last_name = "Akintunde"
+postalcode = "234567"
 
 #Browser initialization
 driver = webdriver.Chrome()
@@ -47,18 +48,28 @@ CheckOut.click()
 time.sleep(wait)
 
 # Entering Billing Information
-driver.find_element(By.ID, "first-name").send_keys("Richard")
-driver.find_element(By.ID, "last-name").send_keys("Akin")
-driver.find_element(By.ID, "postal-code").send_keys("234567")
+FirstName = driver.find_element(By.ID, "first-name")
+FirstName.send_keys("first_name")
+
+LastName = driver.find_element(By.ID, "last-name")
+LastName.send_keys("last_name")
+
+PostalCode = driver.find_element(By.ID, "postal-code")
+PostalCode.send_keys("postalcode")
 time.sleep(wait)
 
 # Finish shopping
-driver.find_element(By.ID, "continue").click()
-driver.find_element(By.ID, "finish").click()
+Continue = driver.find_element(By.ID, "continue")
+Continue.click()
+time.sleep(wait)
+
+Finish = driver.find_element(By.ID, "finish")
+Finish.click()
 time.sleep(wait)
 
 # Go back to products page
-driver.find_element(By.ID, "back-to-products").click()
+BackToProducts = driver.find_element(By.ID, "back-to-products")
+BackToProducts.click()
 
 time.sleep(wait)
 
