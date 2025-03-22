@@ -2,4 +2,4 @@
 
 ## This is my first Python Selenium practice project.
 
-The detail process followed in this project.
+I have for you here the detailed process followed to execute this project. 
